@@ -1,0 +1,29 @@
+import { Link } from 'react-router'
+import '../auth.form.scss'
+
+const Login = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
+    return (
+        <main>
+            <div className="form-container">
+                <form onSubmit={handleSubmit}>
+                    <div className="input-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name='email' id='email' placeholder='enter Email address' />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name='password' id='password' placeholder='enter password' />
+                    </div>
+                    <button className="button primary-button">Login</button>
+                </form>
+                <p>Don't have an account? <Link to={"/register"}>Register</Link></p>
+            </div>
+        </main>
+    )
+}
+
+export default Login
