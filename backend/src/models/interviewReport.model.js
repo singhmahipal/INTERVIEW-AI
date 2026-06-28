@@ -59,7 +59,7 @@ const preparationPlanSchema = new mongoose.Schema(
       required: [true, "focus is required"],
     },
     tasks: {
-      type: String,
+      type: [String],
       required: [true, "task is required"],
     },
   },

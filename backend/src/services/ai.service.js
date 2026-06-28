@@ -121,4 +121,4 @@ async function invokeGeminiAi() {
   });
 }
 
-module.exports = generateInterviewReport;
+module.exports = {generateInterviewReport};
